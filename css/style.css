@@ -70,7 +70,7 @@ body {
   background: var(--button-backgrouhd-color);
   position: absolute;
   left: 0;
-  top: 48px;
+  top: 49px;
   visibility: hidden;
 }
 .navigation-link:hover::after {
