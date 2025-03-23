@@ -53,6 +53,7 @@ body {
 .navigation-item{
   position: relative;
 }
+
 .navigation-link {
   color: var(--max-text-color);
   font-family: "Roboto";
@@ -60,6 +61,9 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.28px;
+  transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation-link::after {
   content: "";
@@ -72,9 +76,11 @@ body {
   left: 0;
   top: 49px;
   visibility: hidden;
+  color: var(--button-backgrouhd-color);
 }
 .navigation-link:hover::after {
   visibility: visible;
+  color: var(--button-backgrouhd-color);
 }
 .navigation-link:hover {
   color: var(--button-backgrouhd-color);
@@ -83,13 +89,14 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.28px;
+  color: var(--button-backgrouhd-color);
 }
 .header-list {
   display: flex;
   gap: 50px;
 }
 .header-information {
-  color: #757575;
+  color: var(--mini-text-color);
   font-family: "Roboto";
   font-size: 14px;
   font-weight: 500;
@@ -98,6 +105,21 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-icont{
+  fill: var(--mini-text-color);
+  transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-icon{
+  fill: var(--mini-text-color);
+  transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-information:hover {
   color: var(--button-backgrouhd-color);
@@ -360,6 +382,9 @@ a[href^="https"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-button:hover{
   background-color: var(--button-backgrouhd-color);
@@ -411,17 +436,27 @@ a[href^="https"] {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon {
   width: 106px;
   height: 60px;
   fill: var(--new-section);
+  transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clients-icon:hover{
+  fill: var(--button-backgrouhd-color);
 }
 .clients-box:hover {
   width: 170px;
   height: 92px;
   border-radius: 4px;
-  border: 1px solid var(--button-backgrouhd-color);
+  border: 1px solid ;
+  color: var(--button-backgrouhd-color);
   .clients-icon {
     fill: var(--button-backgrouhd-color);
 }
@@ -452,6 +487,9 @@ a[href^="https"] {
   background-color: var(--team-background-color);
   padding: 6px 22px 6px 22px;
   border-radius: 4px;
+  transition-property: box-shadow, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .categories-button:hover {
   color: var(--primary-color);
@@ -504,7 +542,11 @@ a[href^="https"] {
   position: relative;
   overflow: hidden;
 }
-
+.content-item{
+  transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .content-item:hover {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12),
     0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
@@ -635,6 +677,9 @@ footer {
   align-items: center;
   border: 0;
   background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-button:hover {
   background-color: var(--button-backgrouhd-color);
@@ -762,6 +807,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button:first-child:hover,
 .modal-button:first-child:focus {
@@ -776,6 +824,9 @@ footer {
   width: 18px;
     height: 18px;
     fill: var(--logo-color);
+    transition-property: fill;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-svg:hover,
 .modal-svg:focus{
@@ -802,6 +853,7 @@ footer {
     line-height: normal;
     letter-spacing: 0.12px;
     position: relative;
+    
 }
 .modal-input{
   border-radius: 4px;
@@ -813,15 +865,20 @@ footer {
   margin-bottom: 10px;
   padding-left: 42px;
   padding-right: 30px;
+  transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:hover, 
 .modal-input:focus{
   border: none;
-  outline: 1px solid var(--button-backgrouhd-color);
+  outline: 1px solid;
+  color: var(--button-backgrouhd-color);
 }
 .modal-input:hover + .form-svg,
 .modal-input:focus + .form-svg{
   fill: var(--button-backgrouhd-color);
+  background-color: #FFF;
 }
 .modal-textarea{
   height: 120px;
@@ -842,6 +899,15 @@ footer {
     padding-bottom: 12px;
     padding-right: 16px;
     padding-left: 16px;
+    transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-textarea:hover,
+.modal-textarea:focus{
+  border: none;
+    outline: 1px solid;
+    color: var(--button-backgrouhd-color);
 }
 .form-svg{
   width: 18px;
@@ -851,6 +917,7 @@ footer {
   top: 50%;
   left: 3%;
 }
+
 
 .checkbox{
   width: 16px;
