@@ -6,7 +6,7 @@
   --header-footer-background-color: #2f303a;
   --button-backgrouhd-color: #2196f3;
   --logo-color: #000000;
-  --new-section: #afb1b8;
+  --new-section: #AFB1B8;
 }
 .container {
   width: 1200px;
@@ -75,11 +75,14 @@ body {
   position: absolute;
   left: 0;
   top: 49px;
-  visibility: hidden;
-  color: var(--button-backgrouhd-color);
+  opacity: 0;
+  color: var(--team-background-color);
+  transition-property: color, opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation-link:hover::after {
-  visibility: visible;
+  opacity: 1;
   color: var(--button-backgrouhd-color);
 }
 .navigation-link:hover {
@@ -432,13 +435,24 @@ a[href^="https"] {
   width: 170px;
   height: 92px;
   border-radius: 4px;
-  border: 1px solid var(--new-section);
+  border: 1px solid ;
+  color: var(--new-section);
   display: flex;
   align-items: center;
   justify-content: center;
   transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clients-box:hover {
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  border: 1px solid ;
+  color: var(--button-backgrouhd-color);
+  .clients-icon {
+    fill: var(--button-backgrouhd-color);
+}
 }
 .clients-icon {
   width: 106px;
@@ -451,16 +465,7 @@ a[href^="https"] {
 .clients-icon:hover{
   fill: var(--button-backgrouhd-color);
 }
-.clients-box:hover {
-  width: 170px;
-  height: 92px;
-  border-radius: 4px;
-  border: 1px solid ;
-  color: var(--button-backgrouhd-color);
-  .clients-icon {
-    fill: var(--button-backgrouhd-color);
-}
-}
+
 
 /* portfolio */
 .categories {
@@ -537,6 +542,12 @@ a[href^="https"] {
     background-color:  rgba(33, 150, 243, 0.90);
     z-index: 1;
     opacity: 0;
+    transition-property: opacity;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.content-description:hover {
+  opacity: 1;
 }
 .description-box{
   position: relative;
@@ -916,14 +927,44 @@ footer {
   position: absolute;
   top: 50%;
   left: 3%;
+  transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
+.form-svg:hover{
+  fill: var(--button-backgrouhd-color);
+}
 .checkbox{
   width: 16px;
   height: 15px;
   margin-right: 8px;
+  border: 2px solid;
+border-color: var(--max-text-color);
+  border-radius: 50%;
+  transition-property: border-color, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.checkbox:hover:checked,
+.checkbox:focus:checked{
+  border-color: var(--button-backgrouhd-color);
+}
+.checkbox:checked {
+  background-color: var(--button-backgrouhd-color);
+  position: relative;
+}
+.checkbox:checked::after{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 6px;
+      width: 6px;
+      height: 12px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+}
+
 .check{
   display: flex;
   align-items: center;
